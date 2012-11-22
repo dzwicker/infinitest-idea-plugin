@@ -1,0 +1,2 @@
+infinitest-idea-plugin
+======================
