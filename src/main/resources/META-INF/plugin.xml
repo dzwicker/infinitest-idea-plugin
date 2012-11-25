@@ -17,6 +17,18 @@
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
+        <!-- configurable extension -->
+        <applicationConfigurable
+                instance="com.in2experience.infinitest.idea.plugin.configuration.ui.InfinitestConfigurable$App"/>
+        <projectConfigurable
+                instance="com.in2experience.infinitest.idea.plugin.configuration.ui.InfinitestConfigurable$Prj"/>
+
+        <!-- service for the settings -->
+        <!-- service for the settings -->
+        <applicationService serviceInterface="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings"
+                            serviceImplementation="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings$App"/>
+        <projectService serviceInterface="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings"
+                        serviceImplementation="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings$Prj"/>
         <toolWindow id="InfinitestToolWindow" icon="/icons/infinitest.png" anchor="bottom"
                     conditionClass="com.in2experience.infinitest.idea.plugin.window.InfinitestToolWindowCondition"
                     factoryClass="com.in2experience.infinitest.idea.plugin.window.InfinitestToolWindowFactory"/>
