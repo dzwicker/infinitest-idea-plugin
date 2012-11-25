@@ -29,6 +29,9 @@
                             serviceImplementation="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings$App"/>
         <projectService serviceInterface="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings"
                         serviceImplementation="com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings$Prj"/>
+
+        <facetType implementation="com.in2experience.infinitest.idea.plugin.facet.InfinitestFacetType"/>
+
         <toolWindow id="InfinitestToolWindow" icon="/icons/infinitest.png" anchor="bottom"
                     conditionClass="com.in2experience.infinitest.idea.plugin.window.InfinitestToolWindowCondition"
                     factoryClass="com.in2experience.infinitest.idea.plugin.window.InfinitestToolWindowFactory"/>
