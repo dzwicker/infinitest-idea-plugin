@@ -1,4 +1,4 @@
-package com.in2experience.infinitest.idea.window;
+package com.in2experience.infinitest.idea.plugin.window;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
