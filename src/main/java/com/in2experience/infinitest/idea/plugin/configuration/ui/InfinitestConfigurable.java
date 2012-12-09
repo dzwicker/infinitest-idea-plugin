@@ -9,7 +9,6 @@ import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SearchableConfigurable;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Comparing;
-import com.in2experience.infinitest.idea.plugin.InfinitestUtil;
 import com.in2experience.infinitest.idea.plugin.configuration.InfinitestSettings;
 
 /**
@@ -65,11 +64,6 @@ public abstract class InfinitestConfigurable implements SearchableConfigurable {
 	@Override
 	public String getDisplayName() {
 		return "Infinitest";
-	}
-
-	@Override
-	public Icon getIcon() {
-		return InfinitestUtil.ICON;
 	}
 
 	@Override
