@@ -32,7 +32,7 @@ public class InfinitestApplicationPlugin
 
 	private final Application application;
 
-	private final Set<Project> projects = new HashSet<>();
+	private final Set<Project> projects = new HashSet<Project>();
 
 	private Table<Project, Module, String> projectModules = HashBasedTable.create();
 
