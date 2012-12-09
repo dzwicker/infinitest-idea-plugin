@@ -193,7 +193,6 @@
     <inspection_tool class="CyclicClassDependency" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="CyclicPackageDependency" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="CyclomaticComplexity" enabled="true" level="ERROR" enabled_by_default="true">
-      <option name="ignoreEqualsMethod" value="true" />
       <option name="m_limit" value="10" />
     </inspection_tool>
     <inspection_tool class="CyclomaticComplexityJS" enabled="true" level="ERROR" enabled_by_default="true">
@@ -548,7 +547,6 @@
     <inspection_tool class="MagicCharacter" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="MagicConstant" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="MagicNumber" enabled="true" level="ERROR" enabled_by_default="true">
-      <option name="ignoreInHashCode" value="true" />
       <option name="ignoreInTestCode" value="true" />
     </inspection_tool>
     <inspection_tool class="MagicNumberJS" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -626,6 +624,7 @@
     <inspection_tool class="NegatedConditionalExpressionJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="NegatedIfElse" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="m_ignoreNegatedNullComparison" value="true" />
+      <option name="m_ignoreNegatedZeroComparison" value="false" />
     </inspection_tool>
     <inspection_tool class="NegatedIfStatementJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="NestedAssignment" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -722,6 +721,7 @@
     <inspection_tool class="PackageVisibleField" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="PackageVisibleInnerClass" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="ignoreEnums" value="false" />
+      <option name="ignoreInterfaces" value="false" />
     </inspection_tool>
     <inspection_tool class="PackageWithTooManyClasses" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="limit" value="10" />
@@ -771,6 +771,7 @@
     <inspection_tool class="ProtectedField" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ProtectedInnerClass" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="ignoreEnums" value="false" />
+      <option name="ignoreInterfaces" value="false" />
     </inspection_tool>
     <inspection_tool class="ProtectedMemberInFinalClass" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="PublicConstructorInNonPublicClass" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -783,6 +784,7 @@
     <inspection_tool class="PublicFieldAccessedInSynchronizedContext" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="PublicInnerClass" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="ignoreEnums" value="false" />
+      <option name="ignoreInterfaces" value="false" />
     </inspection_tool>
     <inspection_tool class="PublicMethodNotExposedInInterface" enabled="false" level="ERROR" enabled_by_default="false">
       <option name="onlyWarnIfContainingClassImplementsAnInterface" value="false" />
@@ -795,7 +797,6 @@
     <inspection_tool class="QAPlugRTAnalysis" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="RawUseOfParameterizedType" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="ignoreObjectConstruction" value="false" />
-      <option name="ignoreTypeCasts" value="false" />
     </inspection_tool>
     <inspection_tool class="ReadObjectAndWriteObjectPrivate" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ReadObjectInitialization" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -945,6 +946,7 @@
     <inspection_tool class="SynchronizeOnThis" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="SynchronizedMethod" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="m_includeNativeMethods" value="true" />
+      <option name="ignoreSynchronizedSuperMethods" value="true" />
     </inspection_tool>
     <inspection_tool class="SynchronizedOnLiteralObject" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="SystemExit" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -970,6 +972,7 @@
     <inspection_tool class="ThreeNegationsPerFunctionJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ThreeNegationsPerMethod" enabled="false" level="ERROR" enabled_by_default="false">
       <option name="m_ignoreInEquals" value="true" />
+      <option name="ignoreInAssert" value="false" />
     </inspection_tool>
     <inspection_tool class="ThrowFromFinallyBlockJS" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="ThrowableInstanceNeverThrown" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -1052,6 +1055,7 @@
     <inspection_tool class="UnnecessaryParentheses" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="ignoreClarifyingParentheses" value="false" />
       <option name="ignoreParenthesesOnConditionals" value="false" />
+      <option name="ignoreParenthesesOnLambdaParameter" value="false" />
     </inspection_tool>
     <inspection_tool class="UnnecessaryQualifierForThis" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="UnnecessaryReturn" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -1101,10 +1105,17 @@
     <inspection_tool class="UseOfProcessBuilder" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="UseOfPropertiesAsHashtable" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="UseOfSunClasses" enabled="true" level="ERROR" enabled_by_default="true" />
-    <inspection_tool class="UtilityClass" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="UtilityClass" enabled="false" level="ERROR" enabled_by_default="false">
+      <option name="ignorableAnnotations">
+        <value />
+      </option>
+    </inspection_tool>
     <inspection_tool class="UtilityClassWithPublicConstructor" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="UtilityClassWithoutPrivateConstructor" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="ignoreClassesWithOnlyMain" value="false" />
+      <option name="ignorableAnnotations">
+        <value />
+      </option>
     </inspection_tool>
     <inspection_tool class="VariableNotUsedInsideIf" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="VoidExpressionJS" enabled="true" level="ERROR" enabled_by_default="true" />
