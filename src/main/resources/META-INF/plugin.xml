@@ -8,9 +8,17 @@
     <idea-version since-build="107.105"/>
 
     <application-components>
+        <component>
+            <implementation-class>com.in2experience.infinitest.idea.plugin.InfinitestApplicationPlugin
+            </implementation-class>
+        </component>
     </application-components>
 
     <project-components>
+        <component>
+            <implementation-class>com.in2experience.infinitest.idea.plugin.project.InfinitestProjectComponent
+            </implementation-class>
+        </component>
     </project-components>
 
     <actions>
